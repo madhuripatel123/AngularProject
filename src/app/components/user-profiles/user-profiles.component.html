@@ -1,0 +1,32 @@
+<!-- 
+<h1>Name-{{name|uppercase}}</h1>
+<h2>Address-{{address}}</h2>
+<h3>Job Profile-{{jobprofile}}</h3>
+<h4>Salary-{{salary|currency:"INR"}}</h4>
+<h4>Phoneno-{{phoneno|countrycode}}</h4>
+<h3>input value-{{isinputvalue}}</h3>
+<input type="text" [value]="isinputvalue" (input)="onchange($event)">
+<input type="text" [(ngModel)]="isinputvalue">
+<div>
+    @for (item of users; track item.name) {
+        @if(item.Salary>50000){
+            <h4>Name-{{item.name}}</h4>
+            <h4>Status-{{item.issingle?"Single":"Coder"}}</h4>
+            <h4>Salary-{{item.Salary}}</h4>
+        }@else {
+            <h4>Name-{{item.name}}</h4>
+            <h4>Status-{{item.issingle?"Single":"Coder"}}</h4>
+            <h4>Salary-hidden</h4>
+        }
+    
+    }
+</div> -->
+<!-- <hr>
+<div *ngFor="let item of users">
+    <h4>Name-{{item.name}}</h4>
+    <h4>Status-{{item.issingle?"Single":"Coder"}}</h4>
+    <h4>Salary-{{item.Salary}}</h4>
+</div> -->
+
+<h1 #myheading appHighlight>Name-{{name}} Status-{{isSingle?"Single":"Coder"}} Salary-{{Salary}}</h1>
+<button (click)="senddata()">send data</button>
